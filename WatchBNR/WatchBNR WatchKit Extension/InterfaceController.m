@@ -57,6 +57,8 @@
 
 -(void)loadLabelData
 {
+    // This code below works because both apps are shared using the group.
+    // The group is in the elements.
     NSString * text = [POCDataSource sharedInstance].getString;
     
     [self.lblPlainText setText:text];

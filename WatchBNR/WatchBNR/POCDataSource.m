@@ -28,7 +28,7 @@ static POCDataSource * shared;
 
 -(void)saveString:(NSString*)stringToSave
 {
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSUserDefaults *prefs = [self userDefaults];
     
     [prefs setObject:stringToSave forKey:KEY];
     [prefs synchronize];
@@ -36,9 +36,15 @@ static POCDataSource * shared;
 
 -(NSString*)getString
 {
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSUserDefaults *prefs = [self userDefaults];
     NSString * value = [prefs objectForKey:KEY];
     return value;
+}
+
+-(NSUserDefaults*)userDefaults
+{
+    NSUserDefaults *prefs = [[NSUserDefaults alloc] initWithSuiteName:@"group.brnwatchkit"];
+    return prefs;
 }
 
 
