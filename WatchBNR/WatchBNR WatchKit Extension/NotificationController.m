@@ -7,9 +7,10 @@
 //
 
 #import "NotificationController.h"
-
+#import "POCDataSource.h"
 
 @interface NotificationController()
+@property (strong, nonatomic) IBOutlet WKInterfaceLabel *lblText;
 
 @end
 
@@ -29,6 +30,12 @@
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
+    
+    NSLog(@"Will Activate");
+    
+    NSString * text = [POCDataSource sharedInstance].getString;
+    
+    [self.lblText setText:text];
 }
 
 - (void)didDeactivate {
@@ -38,6 +45,8 @@
 
 /*
 - (void)didReceiveLocalNotification:(UILocalNotification *)localNotification withCompletion:(void (^)(WKUserNotificationInterfaceType))completionHandler {
+    
+    NSLog(@"Local Notification");
     // This method is called when a local notification needs to be presented.
     // Implement it if you use a dynamic notification interface.
     // Populate your dynamic notification interface as quickly as possible.
@@ -45,10 +54,10 @@
     // After populating your dynamic notification interface call the completion block.
     completionHandler(WKUserNotificationInterfaceTypeCustom);
 }
-*/
-
-/*
+ */
 - (void)didReceiveRemoteNotification:(NSDictionary *)remoteNotification withCompletion:(void (^)(WKUserNotificationInterfaceType))completionHandler {
+    
+    NSLog(@"Remote Notification");
     // This method is called when a remote notification needs to be presented.
     // Implement it if you use a dynamic notification interface.
     // Populate your dynamic notification interface as quickly as possible.
@@ -56,7 +65,7 @@
     // After populating your dynamic notification interface call the completion block.
     completionHandler(WKUserNotificationInterfaceTypeCustom);
 }
-*/
+
 
 @end
 
