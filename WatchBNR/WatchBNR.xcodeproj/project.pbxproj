@@ -22,6 +22,8 @@
 		802847CA1B053DF3004C30B4 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802847C81B053DF3004C30B4 /* Interface.storyboard */; };
 		802847CC1B053DF3004C30B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 802847CB1B053DF3004C30B4 /* Images.xcassets */; };
 		802847CF1B053DF3004C30B4 /* WatchBNR WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 802847AF1B053DF2004C30B4 /* WatchBNR WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		802847D91B054AE2004C30B4 /* POCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 802847D81B054AE2004C30B4 /* POCDataSource.m */; };
+		802847DA1B054AE2004C30B4 /* POCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 802847D81B054AE2004C30B4 /* POCDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		802847C71B053DF3004C30B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		802847C91B053DF3004C30B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		802847CB1B053DF3004C30B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		802847D71B054AE2004C30B4 /* POCDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POCDataSource.h; sourceTree = "<group>"; };
+		802847D81B054AE2004C30B4 /* POCDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POCDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,8 @@
 				802847921B053DE0004C30B4 /* Images.xcassets */,
 				802847941B053DE0004C30B4 /* LaunchScreen.xib */,
 				802847851B053DE0004C30B4 /* Supporting Files */,
+				802847D71B054AE2004C30B4 /* POCDataSource.h */,
+				802847D81B054AE2004C30B4 /* POCDataSource.m */,
 			);
 			path = WatchBNR;
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 				8028478E1B053DE0004C30B4 /* ViewController.m in Sources */,
 				8028478B1B053DE0004C30B4 /* AppDelegate.m in Sources */,
 				802847881B053DE0004C30B4 /* main.m in Sources */,
+				802847D91B054AE2004C30B4 /* POCDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +411,7 @@
 				802847B91B053DF2004C30B4 /* NotificationController.m in Sources */,
 				802847B61B053DF2004C30B4 /* InterfaceController.m in Sources */,
 				802847BC1B053DF2004C30B4 /* GlanceController.m in Sources */,
+				802847DA1B054AE2004C30B4 /* POCDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,6 +672,7 @@
 				802847A71B053DE0004C30B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		802847A81B053DE0004C30B4 /* Build configuration list for PBXNativeTarget "WatchBNRTests" */ = {
 			isa = XCConfigurationList;
@@ -672,6 +681,7 @@
 				802847AA1B053DE0004C30B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		802847D01B053DF3004C30B4 /* Build configuration list for PBXNativeTarget "WatchBNR WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -680,6 +690,7 @@
 				802847D21B053DF3004C30B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		802847D31B053DF3004C30B4 /* Build configuration list for PBXNativeTarget "WatchBNR WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -688,6 +699,7 @@
 				802847D51B053DF3004C30B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

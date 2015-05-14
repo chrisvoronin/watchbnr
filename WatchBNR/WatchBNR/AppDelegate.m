@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "POCDataSource.h"
 
 @interface AppDelegate ()
 
@@ -40,6 +41,29 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+// Handles responses to the watch.
+- (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo
+               reply:(void (^)(NSDictionary *))reply
+{
+    NSString * value = [self makeRandomNumber];
+    
+    // store it for fast retrieval.
+    [[POCDataSource sharedInstance] saveString:value];
+    
+    reply(@{@"mystring": value});
+}
+
+-(NSString*)makeRandomNumber
+{
+    //create the random number.
+    int min = 100;
+    int max = 10000;
+    int randNum = rand() % (max - min) + min;
+    NSString *num = [NSString stringWithFormat:@"%d", randNum]; //Make the number into a string.
+    
+    return num;
 }
 
 @end
