@@ -28,14 +28,26 @@
 
 - (IBAction)buttonPressed:(id)sender {
     
+    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeSound categories:nil]];
+    }
+    
+    //data that we are sending.
+    NSDictionary *infoDict = [NSDictionary dictionaryWithObject:@"DataToSend"
+                                                         forKey:@"customKey"];
+    
+    // in seconds from now
+    NSDate * whenToFire = [NSDate dateWithTimeIntervalSinceNow:10];
+    
     // sends local notification
     // just once, no repeat.
     UIApplication *application = [UIApplication sharedApplication];
     UILocalNotification *notification = [[UILocalNotification alloc]init];
-    //notification.repeatInterval = NSDayCalendarUnit;
-    [notification setAlertBody:@"Hello world"];
-    [notification setFireDate:[NSDate dateWithTimeIntervalSinceNow:1]];
+    //notification.repeatInterval = NSCalendarUnitMinute;
+    [notification setAlertBody:@"Hello world 123"];
+    [notification setFireDate:whenToFire];
     [notification setTimeZone:[NSTimeZone  defaultTimeZone]];
+    [notification setUserInfo:infoDict];
     [application setScheduledLocalNotifications:[NSArray arrayWithObject:notification]];
     
 }

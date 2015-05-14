@@ -10,6 +10,10 @@
 #import "POCDataSource.h"
 
 @interface NotificationController()
+{
+    NSString * notificationMessage;
+    
+}
 @property (strong, nonatomic) IBOutlet WKInterfaceLabel *lblText;
 
 @end
@@ -33,7 +37,10 @@
     
     NSLog(@"Will Activate");
     
-    NSString * text = [POCDataSource sharedInstance].getString;
+    //if we are to get value from the app.
+    //NSString * text = [POCDataSource sharedInstance].getString;
+    
+    NSString * text = notificationMessage;
     
     [self.lblText setText:text];
 }
@@ -43,21 +50,25 @@
     [super didDeactivate];
 }
 
-/*
+
 - (void)didReceiveLocalNotification:(UILocalNotification *)localNotification withCompletion:(void (^)(WKUserNotificationInterfaceType))completionHandler {
     
     NSLog(@"Local Notification");
     // This method is called when a local notification needs to be presented.
     // Implement it if you use a dynamic notification interface.
     // Populate your dynamic notification interface as quickly as possible.
+    
+    notificationMessage = [localNotification.userInfo objectForKey:@"customKey"];
     //
     // After populating your dynamic notification interface call the completion block.
     completionHandler(WKUserNotificationInterfaceTypeCustom);
 }
- */
+ 
 - (void)didReceiveRemoteNotification:(NSDictionary *)remoteNotification withCompletion:(void (^)(WKUserNotificationInterfaceType))completionHandler {
     
     NSLog(@"Remote Notification");
+    
+    notificationMessage = [remoteNotification objectForKey:@"customKey"];
     // This method is called when a remote notification needs to be presented.
     // Implement it if you use a dynamic notification interface.
     // Populate your dynamic notification interface as quickly as possible.
