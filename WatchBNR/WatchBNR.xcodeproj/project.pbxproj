@@ -24,6 +24,8 @@
 		802847CF1B053DF3004C30B4 /* WatchBNR WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 802847AF1B053DF2004C30B4 /* WatchBNR WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		802847D91B054AE2004C30B4 /* POCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 802847D81B054AE2004C30B4 /* POCDataSource.m */; };
 		802847DA1B054AE2004C30B4 /* POCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 802847D81B054AE2004C30B4 /* POCDataSource.m */; };
+		80980CB11B080C6100905B12 /* TestVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80980CAF1B080C6100905B12 /* TestVCViewController.m */; };
+		80980CB21B080C6100905B12 /* TestVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80980CB01B080C6100905B12 /* TestVCViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,9 @@
 		802847D81B054AE2004C30B4 /* POCDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POCDataSource.m; sourceTree = "<group>"; };
 		802847DB1B055702004C30B4 /* WatchBNR WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WatchBNR WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		802847DC1B05576F004C30B4 /* WatchBNR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WatchBNR.entitlements; sourceTree = "<group>"; };
+		80980CAE1B080C6100905B12 /* TestVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVCViewController.h; sourceTree = "<group>"; };
+		80980CAF1B080C6100905B12 /* TestVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVCViewController.m; sourceTree = "<group>"; };
+		80980CB01B080C6100905B12 /* TestVCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestVCViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +164,9 @@
 				802847851B053DE0004C30B4 /* Supporting Files */,
 				802847D71B054AE2004C30B4 /* POCDataSource.h */,
 				802847D81B054AE2004C30B4 /* POCDataSource.m */,
+				80980CAE1B080C6100905B12 /* TestVCViewController.h */,
+				80980CAF1B080C6100905B12 /* TestVCViewController.m */,
+				80980CB01B080C6100905B12 /* TestVCViewController.xib */,
 			);
 			path = WatchBNR;
 			sourceTree = "<group>";
@@ -369,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				802847911B053DE0004C30B4 /* Main.storyboard in Resources */,
+				80980CB21B080C6100905B12 /* TestVCViewController.xib in Resources */,
 				802847961B053DE0004C30B4 /* LaunchScreen.xib in Resources */,
 				802847931B053DE0004C30B4 /* Images.xcassets in Resources */,
 			);
@@ -407,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8028478E1B053DE0004C30B4 /* ViewController.m in Sources */,
+				80980CB11B080C6100905B12 /* TestVCViewController.m in Sources */,
 				8028478B1B053DE0004C30B4 /* AppDelegate.m in Sources */,
 				802847881B053DE0004C30B4 /* main.m in Sources */,
 				802847D91B054AE2004C30B4 /* POCDataSource.m in Sources */,

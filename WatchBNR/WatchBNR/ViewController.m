@@ -30,22 +30,6 @@
     
     if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
         
-        
-//        UIMutableUserNotificationAction *action1;
-//        action1 = [[UIMutableUserNotificationAction alloc] init];
-//        [action1 setActivationMode:UIUserNotificationActivationModeBackground];
-//        [action1 setTitle:@"title"];
-//        [action1 setIdentifier:@"myCategory"];
-//        [action1 setDestructive:NO];
-//        [action1 setAuthenticationRequired:NO];
-//        
-//        UIMutableUserNotificationCategory * category = [[UIMutableUserNotificationCategory alloc] init];
-//        [category setActions:@[action1] forContext:UIUserNotificationActionContextDefault];
-//        [category setIdentifier:@"myCategory"];
-//        
-//        
-//        NSSet * set = [NSSet setWithObjects:category, nil];
-        
         [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeNone|UIUserNotificationTypeSound categories:nil]];
     }
     
